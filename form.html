@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<body>
+
+<form action="action_page.php" method="post" target="_blank" id="mainform" accept-charset="UTF-8" enctype="application/x-www-form-urlencoded" autocomplete="off" oninput="x.value=parseInt(a.value)+parseInt(b.value)" novalidate>
+	<fieldset>
+	<legend>Personal Information:</legend>
+	First name:<br>
+	<input type="text" name="firstname" placeholder="First name" autofocus>
+	<br>
+  Middle name:<br>
+  <input type="text" name="middlename" disable>
+  <br>
+	Last name:<br>
+	<input type="text" name="lastname" placeholder="Last name"><br>
+	<br>
+	<input type="radio" name="gender" value="male" checked> Male<br>
+	<input type="radio" name="gender" value="female"> Female<br>
+  	<input type="radio" name="gender" value="other"> Other<br>
+  	<br>
+    Birthday:
+    <input type="date" name="bday" min="1920-01-01" max="1996-12-30"><br>
+    <br>
+  	<select name="maritalstatus">
+  		<option value="married">Married</option>
+  		<option value="divorced">Divorced</option>
+  		<option value="engaged">Engaged</option>
+  		<option value="single">Single</option>
+  	</select>
+  	</fieldset>
+    Your homepage:<br>
+    <input type="url" name="homepage"><br>
+  	<p>Work Status: </p>
+  	<input list="workstatus" name="workstatus">
+  	<datalist id="workstatus">
+  		<option value="Currently having a job">
+  		<option value="Resigned">
+  		<option value="Terminated">
+  		<option value="Looking for jobs">
+  	</datalist>
+  	<br><br>
+  	<p>Salary: </p>
+  	basic salary
+  	<input type="range" id="a" name="a" value="40000" min="0" max="1000000" step="200">
+  	+ bonus
+  	<input type="number" id="b" name="b" value="0" step="100"> $ 
+  	=
+  	<output name="x" for="a b"></output>
+  	<br><br>
+  	<button type="button" onclick="alert('Please paste your resume below!')">Help</button>
+  	<br>
+  	<textarea name="resume" rows="10" cols="50">Please paste your formed resume here: </textarea>
+  	<br><br>
+    Additional files:<br>
+    <input type="file" name="addfile" multiple>
+    <p>Identity information:</p>
+    <input type="checkbox" name="race1" value="Asian"> Asian<br>
+    <input type="checkbox" name="race2" value="American-white"> American-white<br>
+    <input type="checkbox" name="race3" value="American-black"> American-black<br>
+  	User name:<br>
+	  <input type="text" name="userid" maxlength="20" required>
+	  <br>
+    E-mail:<br>
+    <input type="email" name="email" required><br>
+    Phone number:<br>
+    <input type="tel" name="usrtel" required><br>
+	  User password:<br>
+	  <input type="password" name="psw" maxlength="18" required>
+	  <br>
+  	Encryption: <keygen name="security">
+  	<br>
+  	<input type="submit" formenctype="multipart/form-data" formtarget="_blank">
+</form>
+
+<p>Note that the default width of a text input field is 20 characters.</p>
+
+</body>
+</html>

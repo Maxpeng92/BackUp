@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<title>
+	JavaScript Demo
+</title>
+<meta charset="UTF-8">
+<meta name="Short demo for JS" content="HTML, JavaScript">
+<body>
+
+	<h1>My first JS</h1>
+
+	<script>
+	function myFunction() {
+		document.getElementById("demo").style.fontSize="25px";
+	}
+	</script>
+	<script>
+	function light(sw) {
+		var pic;
+		if (sw==0){
+			pic = "pic_bulboff.gif";
+		}
+		else {
+			pic = "pic_bulbon.gif";
+		}
+		document.getElementById("myImage").src = pic;
+	}
+	</script>
+
+	<p id="demo">JavaScript can change the style of an HTML element.</p>
+	<botton type="button" onclick="myFunction()">Click Me!</button>
+	<br><br>
+
+	<img id="myImage" src="pic_bulboff.gif" width="100" height="180">
+	<p>
+		<button type="button" onclick="light(1)">Light On</button>
+		<button type="button" onclick="light(0)">Light Off</button>
+	</p>
+
+</body>
+</html>
